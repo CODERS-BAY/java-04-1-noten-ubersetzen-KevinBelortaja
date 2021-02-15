@@ -7,26 +7,23 @@ public class Main {
         System.out.println("Note eingeben:");
         int number = scan.nextInt();
 
-        switch (number) {
 
+        String result = switch (number) {
             case 1:
-                System.out.println("Sehr gut");
-                break;
-
+                yield "Sehr gut";
             case 2:
-                System.out.println("Gut");
-                break;
-
+                yield "Gut";
             case 3:
-                System.out.println("Befriedigend");
-                break;
-
+                yield "Befriedigned";
             case 4:
-                System.out.println("Genügned");
-                break;
-
+                yield "Genügend";
             case 5:
-                System.out.println("Nicht Genügend");
-        }
+                yield "Nicht Genügend";
+            default:
+                yield "No grade";
+
+        };
+
+        System.out.println(result);
     }
 }
